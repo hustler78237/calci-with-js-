@@ -1,40 +1,100 @@
+/* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #74ebd5, #acb6e5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+/* Calculator container */
 .parent {
-    background-color: rgb(178, 196, 178);
-    height: 80vh;
-    width: 50vw;
-    margin-left: 25%;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  border-radius: 20px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  padding: 30px;
+  width: 100%;
+  max-width: 400px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  text-align: center;
 }
 
 .parent h1 {
-    text-align: center;
+  color: #fff;
+  margin-bottom: 20px;
 }
 
-.child {
-    background-color: aqua;
-    height: 16vh;
-    text-align: center;
-}
-
+/* Input field */
 .child input {
-    margin-top: 3%;
-    width: 50%;
-    height: 50%;
-    text-align: center;
+  width: 100%;
+  padding: 15px;
+  font-size: 1.5rem;
+  border-radius: 10px;
+  border: none;
+  margin-bottom: 20px;
+  text-align: right;
+  background-color: rgba(255, 255, 255, 0.7);
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.1);
 }
 
+/* Buttons grid */
 .child1 {
-    background-color: blanchedalmond;
-    height: 66vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 40px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
 }
 
+/* Buttons */
 .btn {
-    height: 10%;
-    width: 5%;
-    font-size: larger;
+  padding: 20px;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.25);
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+}
+
+.btn:hover {
+  background: rgba(255, 255, 255, 0.4);
+  transform: scale(1.05);
+}
+
+/* Highlight "=" and "C" buttons */
+.btn:nth-last-child(2), .btn:nth-last-child(3) {
+  background-color: #ff6b6b;
+  color: white;
+}
+
+.btn:nth-last-child(2):hover, .btn:nth-last-child(3):hover {
+  background-color: #ff4c4c;
+}
+
+/* Responsive tweaks */
+@media (max-width: 500px) {
+  .btn {
+    padding: 15px;
+    font-size: 1rem;
+  }
+
+  .parent {
+    padding: 20px;
+  }
+
+  .child input {
+    font-size: 1.2rem;
+    padding: 12px;
+  }
 }
