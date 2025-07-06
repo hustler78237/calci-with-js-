@@ -1,26 +1,28 @@
-.parent{
+.parent {
     background-color: rgb(178, 196, 178);
     height: 80vh;
     width: 50vw;
     margin-left: 25%;
 }
-.parent h1{
+
+.parent h1 {
     text-align: center;
 }
-.child{
+
+.child {
     background-color: aqua;
     height: 16vh;
     text-align: center;
 }
 
-.child input{
+.child input {
     margin-top: 3%;
     width: 50%;
     height: 50%;
     text-align: center;
 }
-    
-.child1{
+
+.child1 {
     background-color: blanchedalmond;
     height: 66vh;
     display: flex;
@@ -31,7 +33,7 @@
     gap: 40px;
 }
 
-.btn{
+.btn {
     height: 10%;
     width: 5%;
     font-size: larger;
